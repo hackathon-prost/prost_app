@@ -6,3 +6,12 @@
   padding: 0 16px;
   flex-direction: column;
 }
+
+.btn-orange {
+  background-color: orange !important;
+  border-color: #eb9834 !important;
+}
+
+.btn-orange:hover {
+  background-color: #eb9834 !important;
+}

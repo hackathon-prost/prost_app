@@ -16,12 +16,15 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import './style.scss';
+import 'bootstrap/dist/css/bootstrap.css';
+import VolunteersPage from '../VolunteersPage/VolunteersPage';
+import ONGsPage from '../ONGsPage/ONGsPage';
 
 const App = () => (
   <div className="app-wrapper">
     <Helmet
-      titleTemplate="%s - React.js Boilerplate"
-      defaultTitle="React.js Boilerplate"
+      titleTemplate="%s - Platform"
+      defaultTitle="Platform"
     >
       <meta name="description" content="A React.js Boilerplate application" />
     </Helmet>
@@ -29,6 +32,8 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route path="/features" component={FeaturePage} />
+      <Route path="/ongs" component={ONGsPage} />
+      <Route path="/volunteers" component={VolunteersPage} />
       <Route path="" component={NotFoundPage} />
     </Switch>
     <Footer />

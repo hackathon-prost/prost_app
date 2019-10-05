@@ -1,4 +1,33 @@
+.header, footer {
+  display: none !important;
+}
+
+.app-wrapper {
+  max-width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
 .home-page {
+
+  .boxes {
+    width: 50%;
+    display: inline-block;
+    height: 700px;
+    vertical-align: middle;
+    text-align: center;
+
+    .btn {
+      margin-top: 200px;
+    }
+  }
+  
+  .left {
+    background-color: orange;
+  }
+
+  .right {
+    background-color: #fff;
+  } 
   
   h2 {
     font-size: 1.5em;

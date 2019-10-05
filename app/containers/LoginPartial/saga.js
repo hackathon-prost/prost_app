@@ -16,7 +16,7 @@ import { userLogin, userErroredLogin } from '../App/actions';
 /**
  * Github repos request/response handler
  */
-export function* getRepos() {
+export function* login() {
   // Select username from store
   const username = yield select(makeSelectUsername());
   const password = yield select(makeSelectPassword());

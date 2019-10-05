@@ -24,7 +24,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
 
   render() {
     const {
-      loading, error, repos, username, onChangeUsername, onSubmitForm
+      loading, error
     } = this.props;
 
     return (
@@ -52,9 +52,5 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
 
 HomePage.propTypes = {
   loading: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
-  onSubmitForm: PropTypes.func,
-  username: PropTypes.string,
-  onChangeUsername: PropTypes.func
+  error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool])
 };

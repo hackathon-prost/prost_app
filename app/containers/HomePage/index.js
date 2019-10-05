@@ -16,15 +16,10 @@ import saga from './saga';
 import HomePage from './HomePage';
 
 const mapDispatchToProps = (dispatch) => ({
-  onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value)),
-  onSubmitForm: (evt) => {
-    if (evt !== undefined && evt.preventDefault) evt.preventDefault();
-    dispatch(loadRepos());
-  }
+  onChangeUsername: (evt) => dispatch(changeUsername(evt.target.value))
 });
 
 const mapStateToProps = createStructuredSelector({
-  repos: makeSelectRepos(),
   username: makeSelectUsername(),
   loading: makeSelectLoading(),
   error: makeSelectError()

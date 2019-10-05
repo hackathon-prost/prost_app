@@ -11,6 +11,7 @@ function loginReducer(state = initialState, action) {
     case CHANGE_USERNAME:
       return { ...state, username: action.username };
     case CHANGE_PASSWORD:
+    console.log(action);
       return {...state, password: action.password }
     default:
       return state;

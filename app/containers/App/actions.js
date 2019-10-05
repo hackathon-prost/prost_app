@@ -16,20 +16,30 @@
  */
 
 import {
-  LOAD_REPOS,
-  LOAD_REPOS_SUCCESS,
-  LOAD_REPOS_ERROR,
+  USER_LOGIN,
+  USER_LOGIN_SUCCESS,
+  USER_LOGIN_ERROR
 } from './constants';
 
-/**
- * Load the repositories, this action starts the request saga
- *
- * @return {object} An action object with a type of LOAD_REPOS
- */
-export function loadRepos() {
+
+export function userLogin() {
   return {
-    type: LOAD_REPOS,
+    type: USER_LOGIN,
   };
+}
+
+export function userLoggedIn(currentUser) {
+  return {
+    type: USER_LOGIN_SUCCESS,
+    currentUser
+  }
+}
+
+export function userErroredLogin(error) {
+  return {
+    type: USER_LOGIN_ERROR,
+    error
+  }
 }
 
 /**

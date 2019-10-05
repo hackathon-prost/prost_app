@@ -7,7 +7,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import ReposList from 'components/ReposList';
 
 import { Link } from 'react-router-dom';
 import './style.scss';
@@ -27,11 +26,6 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
     const {
       loading, error, repos, username, onChangeUsername, onSubmitForm
     } = this.props;
-    const reposListProps = {
-      loading,
-      error,
-      repos
-    };
 
     return (
       <article>
